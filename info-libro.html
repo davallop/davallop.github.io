@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info de un libro</title>
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+    <link rel="stylesheet" href="css2.css">
+    <link rel="stylesheet" href="ocultar.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <header>
+        <span><a href="mostrar_autor.html">Ver los autores</a></span>
+        <span><a href="mostrar_libros.html">Ver los libros</a></span>
+        <span><a href="mostrar_categorias.html">Ver las categorias</a></span>
+    </header>
+    <h1 id="nombre">Nombre del libro</h1>
+
+    <div class="libro">
+        <img id="imagen" src="#" alt="#">
+
+        <div class="info">
+            <p id="sinopsis">Sinopsis</p>
+            <p id="anio">Año</p>
+        </div>
+    </div>
+    <details>
+        <summary>Modificar el libro</summary>
+
+        <table>
+            <tr>
+                <td><label for="columnValue1">Nuevo ID:</label></td>
+                <td><input type="text" id="columnValue1" value=""></td>
+            </tr>
+            <tr>
+                <td><label for="columnValue2">Nuevo nombre:</label></td>
+                <td><input type="text" id="columnValue2" value=""></td>
+            </tr>
+            <tr>
+                <td><label for="columnValue3">Nuevo sinopsis:</label></td>
+                <td><input type="text" id="columnValue3" value=""></td>
+            </tr>
+            <tr>
+                <td><label for="columnValue4">Nuevo anio:</label></td>
+                <td><input type="text" id="columnValue4" value=""></td>
+            </tr>
+            <tr>
+                <td><label for="columnValue5">Nuevo imagen:</label></td>
+                <td><input type="text" id="columnValue5" value=""></td>
+            </tr>
+        </table>
+
+        <button onclick="update()">Insertar una fila</button>
+
+        <h1>Información del resultado</h1>
+        <p>¿Hay error?: <span id="error"></span></p>
+        <p>Mensaje: <span id="message"></span></p>
+    </details>
+    <details>
+        <summary>Borrar libro</summary>
+        <button onclick="ddelete()">Borrar</button>
+    </details>
+    <script src="consultarInfoLibro.js"></script>
+    <script src="update2.js"></script>
+    <script src="delete.js"></script>
+</body>
+
+</html>

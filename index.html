@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+</head>
+<body>
+    <div>
+    <p>Usuario</p>
+    <input type="text" id="usuario">
+    <p>Contraseña</p>
+    <input type="password" id="contrasena">
+    <br>
+    <br>
+    <button onclick="consultarLogin()">Boton</button>
+    </div>
+
+<script>
+function consultarLogin() {
+    const dataForSelect = {
+        operation: "select",
+        table: "usuarios"
+    };
+
+    const idImplementacion = "AKfycbx12UhJQhkJ-wUZUlqTdRwF3LzctfSKUGUjUbYwyOixoR5lbPk4tDvJbHVqa16YcKt_";
+
+    GoogleSheetDataBaseOperation(
+        idImplementacion,
+        dataForSelect,
+        consultarLoginTerminado);
+}
+
+function consultarLoginTerminado(response) {
+
+    let usuarioEncontrado = false;
+
+    for (let i = 0; i < response.values.length; i++) {
+        let password = document.getElementById("contrasena").value;
+        let usuario = document.getElementById("usuario").value;
+
+        if (response.values[i].usuario == usuario && response.values[i].contrasena == password && response.values[i].tipo == "admin") {
+            console.log("El usuario es correcto, le redireccionamos a la página principal");
+            usuarioEncontrado = true;
+            window.location = "mostrar_libros.html";
+        }
+        else if (response.values[i].usuario == usuario && response.values[i].contrasena == password && response.values[i].tipo == "usuario") {
+            console.log("El usuario es correcto, le redireccionamos a la página principal");
+            usuarioEncontrado = true;
+            window.location = "mostrar_libros_usuario.html";
+        }
+    }
+
+    if (usuarioEncontrado == false) {
+        alert("El usuario y la contraseña no coinciden.");
+    }
+}
+</script>
+</body>
+</html>

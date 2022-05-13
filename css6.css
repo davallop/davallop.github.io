@@ -1,0 +1,45 @@
+#resultado {
+    width: 100%;
+}
+#resultado .autores {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.autores .autor {
+    width: 31%;
+    background-color: antiquewhite;
+    margin: 1%;
+}
+.autor span {
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+}
+.autor a {
+    display: inline-block;
+    margin: 2%;
+}
+
+#resultado {
+    width: 100%;
+}
+#resultado .categorias {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.categorias .categoria {
+    width: 31%;
+    background-color: antiquewhite;
+    margin: 1%;
+}
+.categoria span {
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+}
+.categoria a {
+    display: inline-block;
+    margin: 2%;
+}

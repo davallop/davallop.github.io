@@ -1,0 +1,23 @@
+body {
+    background-color: aqua;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*Mostrar libros*/
+#libros {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.libro {
+    margin: 1%;
+    background-color: aliceblue;
+    border-radius: 3%;
+    width: 31%;
+}
+.libro img {
+    width: 35%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    height: 300px;
+}

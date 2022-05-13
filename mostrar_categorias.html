@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="ocultar.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="css6.css">
+    <style>
+        span {
+            margin: 1%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span><a href="mostrar_autor.html">Ver los autores</a></span>
+        <span><a href="mostrar_libros.html">Ver los libros</a></span>
+        <span><a href="mostrar_categorias.html">Ver las categorias</a></span>
+    </header>
+    <div id="resultado"></div>
+
+<br>
+<details>
+    <summary>Insertar una categoria</summary>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" id="id_categoria"></td>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td><input type="text" id="nombre"></td>
+        </tr>
+    </table>
+
+        <button onclick="insertarCategoria()" id="btnInsertar">Insertar categoria</button>
+</details>
+
+<details>
+    <summary>Eliminar categoria</summary>
+    
+        <table>
+            <tr>
+                <td><label for="key">ID para borrar</label></td>
+                <td><input type="text" id="key" value=""></td>
+            </tr>
+        </table>
+    
+        <button onclick="ddelete()">Borrar</button>
+    
+        <h1>Información del resultado</h1>
+        <p>¿Hay error?: <span id="error"></span></p>
+        <p>Mensaje: <span id="message"></span></p>
+    </details>
+
+    <script src="insertarCategoria.js"></script>
+    <script src="deleteCategoria.js"></script>
+    <script src="mostrar_categorias.js"></script>
+</body>
+</html>

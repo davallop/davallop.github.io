@@ -1,0 +1,29 @@
+body {
+    background-color: aqua;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+/*Mostrar info-libro*/
+h1 {
+    text-transform: uppercase;
+}
+
+.libro {
+    width: 50%;
+    background-color: aliceblue;
+    text-align: center;
+    margin: 0px auto;
+}
+table {
+    margin: 0px auto;
+}
+
+.libro * {
+    margin: 2%;
+}
+.libro img {
+    width: 80%;
+}
+.info {
+    padding-bottom:  2%;
+}
